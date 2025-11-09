@@ -58,7 +58,7 @@ toggleModeBtn.addEventListener('click', () => {
   isdarkMode = !isdarkMode;
 
   if (isdarkMode) {
-    document.body.style.backgroundColor = '#010109ff'; //dark blue
+    document.body.style.backgroundColor = '#03032cff'; //dark blue
     btnGrow.style.backgroundColor = '#01b2f3ff'; //light blue
     btnShrink.style.backgroundColor = '#01b2f3ff'; //light blue
     btnSubmit.style.backgroundColor = '#01b2f3ff'; //light blue
