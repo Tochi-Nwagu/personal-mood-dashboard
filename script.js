@@ -65,12 +65,12 @@ toggleModeBtn.addEventListener('click', () => {
     document.body.style.color = '#fff';
   } else {
     document.body.style.backgroundColor = '#ffffff'; //white
-    btnGrow.style.backgroundColor = '#01b2f3ff'; //light blue
-    btnShrink.style.backgroundColor = '#01b2f3ff'; //light blue
-    btnSubmit.style.backgroundColor = '#01b2f3ff'; //light blue
+    btnGrow.style.backgroundColor = '#dad6d6'; //light blue
+    btnShrink.style.backgroundColor = '#dad6d6'; //light blue
+    btnSubmit.style.backgroundColor = '#dad6d6'; //light blue
     moodBox.style.backgroundColor = '#db6868ff'; //light red
-    toggleModeBtn.style.backgroundColor = '#01b2f3ff'; //light blue
-    showSecretBtn.style.backgroundColor = '#01b2f3ff'; //light blue
+    toggleModeBtn.style.backgroundColor = '#dad6d6'; //light blue
+    showSecretBtn.style.backgroundColor = '#dad6d6; //light blue
     document.body.style.color = '#000';
   }
 });
