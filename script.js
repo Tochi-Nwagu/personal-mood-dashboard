@@ -23,6 +23,8 @@ btnSubmit.addEventListener('click', () => {
   } else {
     greetings.innerText = 'Hello, friend!';
     greetings.style.color = '#333';
+    greetings.style.fontWeight = 'normal';
+    greetings.style.fontSize = '24px';
   }
 
   //Clear input field
