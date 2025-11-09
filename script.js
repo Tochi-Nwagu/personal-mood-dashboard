@@ -80,6 +80,11 @@ toggleModeBtn.addEventListener('click', () => {
     toggleModeBtn.style.backgroundColor = '#dad6d6';
     showSecretBtn.style.backgroundColor = '#dad6d6';
     document.body.style.color = '#000';
+    btnShrink.style.color = '#000';
+    btnGrow.style.color = '#000';
+    btnSubmit.style.color = '#000';
+    toggleModeBtn.style.color = '#000';
+    showSecretBtn.style.color = '#000';
   }
 });
 //Show secret mmessage
