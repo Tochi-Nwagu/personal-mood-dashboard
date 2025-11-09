@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      body {
+        display: flex;
+        flex-direction: column; /* stack divs vertically */
+        justify-content: center;
+        align-items: center; /* horizontal centering */
+        min-height: 100vh; /* make body fill the screen */
+        margin: 0 auto;
+        padding-top: 30px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+      .text {
+        display: none;
+      }
+      #moodBox {
+        /* width: 150px;
+        height: 150px; */
+        background-color: #ea8383;
+        margin: 20px auto;
+        transition: width 0.3s, height 0.3s;
+      }
+      .btn {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #dad6d6;
+        color: #000;
+        font-size: 24px;
+      }
+      input {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    </style>
+    <title>Personal Mood App</title>
+  </head>
+  <body>
+    <h1>Personal Mood DashBoard</h1>
+    <div class="container">
+      <input
+        type="text"
+        id="nameInput"
+        name="name"
+        placeholder="Enter your name"
+        required
+      />
+      <button class="btn" id="btnSubmit">Submit</button>
+      <p style="display: none" id="greetings">Hello, Friend</p>
+    </div>
+    <div id="moodBox">
+      <button class="btn" id="btnGrow">Grow</button>
+      <button class="btn" id="btnShrink">Shrink</button>
+    </div>
+    <div>
+      <button class="btn" id="toggleBtn">Day/Night</button>
+    </div>
+    <div>
+      <button class="btn" id="showSecretBtn">Click Me</button>
+      <p style="display: none" id="secret">You are Awesome</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
