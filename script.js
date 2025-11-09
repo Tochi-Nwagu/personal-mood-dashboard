@@ -9,6 +9,7 @@ const showSecretBtn = document.getElementById('showSecretBtn');
 const secretMessage = document.getElementById('secret');
 //enter name and displkay greeting
 greetings.innerText = 'Hello, friend!';
+greetings.style.color = '#333';
 
 nameInput.addEventListener('input', () => {
   const name = nameInput.value.trim();
@@ -23,7 +24,7 @@ nameInput.addEventListener('input', () => {
     greetings.style.fontSize = '32px';
   } else {
     greetings.innerText = 'Hello, friend!';
-    greetings.style.color = '#333';
+    greetings.style.color = isdarkMode ? '#fff' : '#333';
     greetings.style.fontWeight = 'normal';
     greetings.style.fontSize = '18px';
   }
@@ -72,8 +73,13 @@ toggleModeBtn.addEventListener('click', () => {
     showSecretBtn.style.color = '#fff';
     moodBox.style.backgroundColor = '#db6868ff'; //light red
     toggleModeBtn.style.backgroundColor = '#01b2f3ff'; //light blue
-    showSecretBtn.style.backgroundColor = '#01b2f3ff'; //light blue
+    showSecretBtn.style.backgroundColor = '#01b2f3ff'; //light
+    //greetings.style.color = isdarkMode ? '#fff' : '#333';
     document.body.style.color = '#fff';
+
+    if (!nameInput.value.trim()) {
+      greetings.style.color = '#fff';
+    }
   } else {
     document.body.style.backgroundColor = '#ffffff'; //white
     btnGrow.style.backgroundColor = '#dad6d6';
@@ -86,6 +92,9 @@ toggleModeBtn.addEventListener('click', () => {
     btnGrow.style.color = '#000';
     toggleModeBtn.style.color = '#000';
     showSecretBtn.style.color = '#000';
+    if (!nameInput.value.trim()) {
+      greetings.style.color = '#333';
+    }
   }
 });
 //Show secret mmessage
