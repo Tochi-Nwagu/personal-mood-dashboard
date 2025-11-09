@@ -1,7 +1,6 @@
 'use strict';
 const nameInput = document.getElementById('nameInput');
 const greetings = document.getElementById('greetings');
-const btnSubmit = document.getElementById('btnSubmit');
 const moodBox = document.getElementById('moodBox');
 const btnGrow = document.getElementById('btnGrow');
 const btnShrink = document.getElementById('btnShrink');
@@ -9,7 +8,9 @@ const toggleModeBtn = document.getElementById('toggleBtn');
 const showSecretBtn = document.getElementById('showSecretBtn');
 const secretMessage = document.getElementById('secret');
 //enter name and displkay greeting
-btnSubmit.addEventListener('click', () => {
+greetings.innerText = 'Hello, friend!';
+
+nameInput.addEventListener('input', () => {
   const name = nameInput.value.trim();
 
   //Display greetings
@@ -27,8 +28,8 @@ btnSubmit.addEventListener('click', () => {
     greetings.style.fontSize = '18px';
   }
 
-  //Clear input field
-  nameInput.value = '';
+  // //Clear input field
+  // nameInput.value = '';
 });
 
 //mood box
@@ -58,13 +59,11 @@ toggleModeBtn.addEventListener('click', () => {
   isdarkMode = !isdarkMode;
 
   if (isdarkMode) {
-    document.body.style.backgroundColor = '#03032cff'; //dark blue
+    document.body.style.backgroundColor = '#010109ff'; //dark blue
     btnGrow.style.backgroundColor = '#01b2f3ff'; //light blue
     btnShrink.style.backgroundColor = '#01b2f3ff'; //light blue
-    btnSubmit.style.backgroundColor = '#01b2f3ff'; //light blue
     btnShrink.style.color = '#fff';
     btnGrow.style.color = '#fff';
-    btnSubmit.style.color = '#fff';
     toggleModeBtn.style.color = '#fff';
     showSecretBtn.style.color = '#fff';
     moodBox.style.backgroundColor = '#db6868ff'; //light red
@@ -75,19 +74,18 @@ toggleModeBtn.addEventListener('click', () => {
     document.body.style.backgroundColor = '#ffffff'; //white
     btnGrow.style.backgroundColor = '#dad6d6';
     btnShrink.style.backgroundColor = '#dad6d6';
-    btnSubmit.style.backgroundColor = '#dad6d6';
     moodBox.style.backgroundColor = '#db6868ff'; //light red
     toggleModeBtn.style.backgroundColor = '#dad6d6';
     showSecretBtn.style.backgroundColor = '#dad6d6';
     document.body.style.color = '#000';
     btnShrink.style.color = '#000';
     btnGrow.style.color = '#000';
-    btnSubmit.style.color = '#000';
     toggleModeBtn.style.color = '#000';
     showSecretBtn.style.color = '#000';
   }
 });
 //Show secret mmessage
+
 let secretVisible = false;
 
 showSecretBtn.addEventListener('click', () => {
