@@ -39,7 +39,7 @@ btnGrow.addEventListener('click', () => {
   boxSize += 20;
   moodBox.style.width = boxSize + 'px';
   moodBox.style.height = boxSize + 'px';
-  //.style.margin = '20px auto';
+  moodBox.style.backgroundColor = '#db6868ff';
 });
 
 //shrink box
@@ -88,11 +88,6 @@ toggleModeBtn.addEventListener('click', () => {
   }
 });
 //Show secret mmessage
-// showSecretBtn.addEventListener('click', () => {
-//   alert('Javascript is awesome!');
-//   secretMessage.style.display = 'block';
-// });
-
 let secretVisible = false;
 
 showSecretBtn.addEventListener('click', () => {
