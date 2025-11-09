@@ -34,18 +34,22 @@ nameInput.addEventListener('input', () => {
 
 //mood box
 let boxSize = 150;
+const minSize = 120; // smallest size allowed
+const maxSize = 300; // optional: largest size allowed
 
 //growbox on button click
 btnGrow.addEventListener('click', () => {
-  boxSize += 20;
-  moodBox.style.width = boxSize + 'px';
-  moodBox.style.height = boxSize + 'px';
-  moodBox.style.backgroundColor = '#db6868ff';
+  if (boxSize < maxSize) {
+    boxSize += 20;
+    moodBox.style.width = boxSize + 'px';
+    moodBox.style.height = boxSize + 'px';
+    moodBox.style.backgroundColor = '#db6868ff';
+  }
 });
 
 //shrink box
 btnShrink.addEventListener('click', () => {
-  if (boxSize >= 100) {
+  if (boxSize > minSize) {
     boxSize -= 20;
     moodBox.style.width = boxSize + 'px';
     moodBox.style.height = boxSize + 'px';
